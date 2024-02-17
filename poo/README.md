@@ -79,3 +79,38 @@ end
 pessoa = Pessoa.new('Max', 21)
 pessoa.mostrar_informacoes
 ```
+
+- Getters e Setters
+
+  - Usando attr_reader e attr_writer
+    ```rb
+    class Produto 
+      attr_reader :nome, :preco, :fabricante
+      attr_writer :nome, :preco, :fabricante
+    end
+
+    celular = Produto.new
+
+    celular.fabricante = 'Xiamoi'
+    celular.nome = 'Redmi 9s Ultra'
+    celular.preco = 2450
+
+
+    puts "Fabricante: #{celular.fabricante}, nome: #{celular.nome}, preço: #{celular.preco}"
+    ```
+
+  - Usando attr_accessor
+    ```rb
+    class Produto 
+      attr_accessor :nome, :preco, :fabricante
+    end
+
+    celular = Produto.new
+
+    celular.fabricante = 'Xiamoi'
+    celular.nome = 'Redmi 9s Ultra'
+    celular.preco = 2450
+
+
+    puts "Fabricante: #{celular.fabricante}, nome: #{celular.nome}, preço: #{celular.preco}"
+    ```
